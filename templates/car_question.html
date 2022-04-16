@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SEU_MATH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: 'Titillium Web', sans-serif;
+        min-height: 0;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        margin: 90px 0;
+        transform: translate( -50% , 0 );
+        box-shadow: 0 10px 0 0 rgb(109, 246, 145);
+        background-color: rgba(254,255,250,1);
+        max-width: 450px;
+        padding: 30px
+      }
+      p {
+        color: rgba(48,69,92,0.8);
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        max-height: 800px;
+        opacity: 1;
+        transform: translate( 0 , 0 );
+        margin-top: 14px;
+        z-index: 2
+      }
+      .top_page{
+        text-align: center
+      }
+      .top_page,h3 {
+        color: brown;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number]{
+        -moz-appearance: textfield;
+      }
+      input{
+        width: 75px;
+        margin: 1.5px 1.5px;
+        line-height: 28px;
+      }
+     /* input[type=submit]{
+      float: right;
+     } */
+      
+    </style>
+  </head>
+  <body>
+    <div class="top_page">
+      <a href = {{ url_for('home') }}>صفحة البداية</a>
+    <h3>
+        اكتب الارقام بدون فاصلة
+    </h3>
+    </div>
+    <form method="post">
+      <p>
+        The basic model of a particular car (2WD) with a power sunroof costs $<span><input type="text" name="basic_2WD_sunroof" value="{{request.form['basic_2WD_sunroof']}}"></span> 
+        When equipped with four-wheel drive (4WD) and a sunroof, the vehicle's price rose to $<span><input type="text" name="fourWD_sunroof" value="{{request.form['fourWD_sunroof']}}"></span>.
+        The cost of the basic model with 4WD was $<span><input type="text" name="basic_4WD" value="{{request.form['basic_4WD']}}"></span>.
+        Find the basic price the cost of 4WD and the cost of a sunroof?
+      </p>
+      <div style="text-align: center;">
+        <input class="btn btn-primary" type="submit" value="حلها">
+      </div>
+    </form>
+    {% if answer != "" %}
+    <div class="card">
+    <div class="card-body">
+      <p>😎</p>
+      {%for key,value in answer%}
+    <p>{{key}}: {{value}}</p>
+    {%endfor%}
+  </div>
+    </div>
+    {% else %}
+    <div>
+    </div>
+    {%endif%}
+  </body>
+</html>
+
+

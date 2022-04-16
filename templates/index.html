@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SEU_MATH</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <table class="styled-table">
+      <thead>
+        <tr>
+            <th>السؤال</th>
+            <th>الحل</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>An office supply store recently sold a black printer ink cartridge for
+            $17.99 and a color printer ink cartridge for $24.99 At the start of a
+            recent fall semester, a total of 59 of these cartridges was sold for a
+            total of $1208.41. How many of each type were purchased?</td>
+          <td><a class="btn btn-success" href = {{ url_for('printer') }}>solution</a></td>
+      </tr>
+
+      <tr class="active-row">
+        <td>A nontoxic furniture polish can be made by combining vinegar and olive
+          oil. The amount of oil should be three times the amount of vinegar. How
+          much of each ingredient is needed in order to make 38oz of furniture
+          polish?</td>
+        <td><a class="btn btn-success" href = {{ url_for('polish') }}>solution</a></td>
+    </tr>
+    
+    <tr>
+       <td> Soybean meal is 18% protein, cornmeal is 9% protein.
+        How many pounds of each should be mixed together in order to get 360-lb mixture that is 10% protein?
+      </td>
+       <td>
+        <a class="btn btn-success" href = {{ url_for('soybean') }}>solution</a>
+       </td> 
+    </tr>
+    <tr class="active-row">
+        <td>
+          $5400 is invested, part of it at 10% and part of it at 7% For a certain year. 
+          the total yield is $468.00 How much was invested...
+        </td>
+       <td>
+        <a class="btn btn-success" href = {{ url_for('investment') }}>solution</a>
+       </td> 
+    </tr>
+    <tr>
+       <td>
+        In triangle ABC the measure of angle B is 25 more than three times the measure of angle A.
+        The measure of angle C is 50 more than the measure of angle A. Find the measure of each angle
+       </td> 
+       <td>
+        <a class="btn btn-success" href = {{ url_for('triangle') }}>solution</a>
+       </td> 
+    </tr>
+    <tr class="active-row">
+       <td>
+        The basic model of a particular car (2WD) with a power sunroof costs $27,615 
+        When equipped with four-wheel drive (4WD) and a sunroof, the vehicle's price rose to $30,155.
+        The cost of the basic model with 4WD was $28,955.
+        Find the basic price the cost of 4WD and the cost of a sunroof?
+       </td> 
+       <td>
+        <a class="btn btn-success" href = {{ url_for('car') }}>solution</a>
+       </td> 
+    </tr>
+    <tr>
+       <td>
+        An investment of $37,000 was made by a business club.
+        The investment was split into three parts and lasted for one year. 
+        The first part of the investment earned 8% interest, the second 6% and the third 9%.
+        Total interest from the investments was $3030.
+        The interest from the first investment was 6 times the interest from the second.
+        Find the amounts of the three parts of the investment.
+       </td> 
+       <td>
+        <a class="btn btn-success" href = {{ url_for('business') }}>solution</a>
+       </td> 
+    </tr>
+    <tr class="active-row">
+       <td>
+        When three pumps, A, B and C , are running together, they can pump 3500 gal per hour 
+        When only A and B are running 2100 gal per hour can be pumped
+        When only A and C are running 2400 gal per hour can be pumped
+        What is the pumping capacity of each pump?
+       </td> 
+       <td>
+        <a class="btn btn-success" href = {{ url_for('pump') }}>solution</a>
+       </td> 
+    </tr>
+    <tr>
+       <td>
+        The sum of three numbers is 56.
+        The difference of the largest and the smallest is 49,
+        and the sum of the two smaller numbers is 14. 
+        Find the numbers?
+       </td> 
+        <td>
+          <a class="btn btn-success" href = {{ url_for('summation') }}>solution</a>
+        </td>
+    </tr>
+    <tr class="active-row">
+       <td>
+        One canned drink is 20% orange juice; another is 10% orange juice. 
+        How many liters of each should be mixed together in order to get 10L that is 14 % orange ?
+       </td> 
+        <td>
+          <a class="btn btn-success" href = {{ url_for('drink') }}>solution</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+        A train leaves a station and travels north at a speed of 75 mph.
+        Two hours later, a second train leaves on a parallel track and travels north at 125 mph.
+        How far from the station will they meet?
+       </td>
+        <td>
+          <a class="btn btn-success" href = {{ url_for('train') }}>solution</a>
+        </td>
+    </tr>
+    <tr class="active-row">
+       <td>
+        Kyle works at a donut factory, where a 10oz cup of coffee costs 95c ,
+        a 14-oz cup costs $1.15, and a 20-oz cup costs $1.50 During one busy period Kyle served 34 cups of coffee,
+        using 524 ounces of coffee, while collecting a total of $42.10 How many cups of each size did Kyle fill?
+       </td> 
+        <td>
+          <a class="btn btn-success" href = {{ url_for('donut') }}>solution</a>
+        </td>
+    </tr>
+ </body>
+</html>
